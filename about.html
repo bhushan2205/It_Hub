@@ -4,58 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <link   rel="icon" href="img/icon_img.jpeg">
     <link rel="stylesheet" href="style.css">
-    <title>It Hub</title>
+    <title>it hub classes</title>
     <style>
-        .container{
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            margin: 20px;
+        .about_container{
+            display: flex;
+            padding: 2vw;
         }
-        
+        .about_para >*{
+            padding: min(10px, 3%);
+            font-size: clamp(19px, 10vw ,20px);
+        }
+        .about_container .img{            
+            max-width: 100%;
+        }
+        .title{
+            margin: -5vw 0 .5vw .5vw ;
+        }
+        .sub_container{
+            display: flex;
+            justify-content: space-around;
+        }
         .text-center{
-            text-align: center;
-            margin-bottom: 20px;
+            padding: 3vw;
         }
-        
-        .about_para h2,p{
-            margin-top: 15px;
-        }
-        h1{
-            margin: 20px;
-        }
-        
-        .about_para p{
-            font-size: larger;
-        }
-        
         .text-center img{
-            width : 250px;
-            height: 250px;
             border-radius: 50%;
+           max-width:  15vw;
         }
         
+        @media only screen and (max-width: 768px) {
+            .about_container{
+                flex-direction: column-reverse;
+            }
+            .about_container .img{   
+                margin: 0 20vw;
+            }
+            .title{
+                margin: 1vw;
+            }
+            .sub_container{
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h4>IT HUB</h4>
-            <div class="navigation">
-                <a href="index.html" >Home </a>
-                <a href="about.html" >About Us </a>
-                <a href="course.html">Course</a>
-                <a href="form.html"><i class="ri-article-line"></i></a>
-            </div>
+    <!-- header start -->
+    <header >
+        <div class="navigation">
+        <h1>It Hub</h1>
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
+        </div>
     </header>
+    <!-- header end -->
 
-        <div class="container">
+    <!-- main start -->
+    <main>
+        <div class="about_container">
             <div class="about_para">
-                <h2 class="text-center">Our Story</h2>
-                <p class="text-center">We introduce ourselves as core Software Developer Company situated at Maharashtra
+                <h2>Our Story</h2>
+                <p>We introduce ourselves as core Software Developer Company situated at Maharashtra
                     (India). We
                     experiment,
                     and
@@ -68,14 +84,14 @@
                     Through
                     Our
                     Expert Faculty.</p>
-                <h2 class="text-center">We Are Inspired</h2>
-                <p class="text-center">To Contribute in India’s Development by increasing the number of skillful &
+                <h2>We Are Inspired</h2>
+                <p>To Contribute in India’s Development by increasing the number of skillful &
                     trained people to play an
                     instrumental role in our client’s success by imparting apt trainings and to be the benchmarks in the
                     field
                     of training & development.</p>
-                <h2 class="text-center">Our Focus</h2>
-                <p class="text-center">Is Set To increase the employability ratio in India to give the best training
+                <h2>Our Focus</h2>
+                <p>Is Set To increase the employability ratio in India to give the best training
                     experience to our
                     clients
                     at
@@ -83,52 +99,53 @@
                     society.
                 </p>
             </div>
-                <img class="img-fluid"
-                    src="img/about_img.png"
-                    alt="">
-        
+            <div class="img">
+                <img src="img/about_img.png" alt="">
+            </div>
         </div>
-  
-        <h1>Our Team :</h1>
-        <div class="container">
+        <div class="title">
+            <h1>Our Team :</h1>
+        </div>
+        <div class="sub_container">
             <div class="text-center">
                 <img src="img/bhushan_pic.jpg"alt="">
                 <h3>Bhushan Chaudhari</h3>
-                <h5>Email:</h5><h5>chaudharibhushan4545@gmail.com</h5>
+                <h5>Email: chaudharibhushan@gmail.com</h5>
             </div>
         <div class=" text-center">
             <img src="img/ajay_pic.png"alt="">
             <h3>Ajay Gande</h3>
-            <h5>Email:</h5> <h5> ajaygande1@gmail.com</h5>
+            <h5>Email: ajaygande1@gmail.com</h5>
         </div>
     </div>
+    </main>
+    <!-- main end -->
 
     <!-- footer start -->
     <footer>
         <div class="footer_container">
-            <div class="col_all">
-                <h2 class="heading">About Us</h2>
+            <div class="col_2">
+                <h2>About Us</h2>
                 <p>We are a leading programming language institute offering high-quality courses to students.</p>
             </div>
-            <div class="col_all">
-                <h2 class="heading">Quick Links</h2>
+            <div class="col_2">
+                <h2>Quick Links</h2>
                 <ul class="list-unstyled p-0 m-0">
                     <li><a href="index.html">Home</a></li>
                     <li> <a href="about.html">About Us </a></li>
                     <li><a href="course.html">Course</a> </li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col_all">
-                <h2 class="heading">Contact Us</h2>
-                <a href="#">
-                   <span><i class="ri-map-pin-line"></i></span> IT HUB, N-4, Cidco, Chhatrapati Sambhajinagar 431001</a>
-                  <a href="#">  <span><i class="ri-phone-line"></i></span> +91 70669 83999</a>
+            <div class="col_2">
+                <h2>Contact Us</h2>
+                <a href="#"><span><i class="ri-map-pin-line"></i></span> IT HUB, N-4, Cidco, Chhatrapati Sambhajinagar 431001</a>
+                  <a href="#"><span><i class="ri-phone-line"></i></span> +91 70669 83999</a>
                 <a href="#"> <span><i class="ri-mail-line"></i></span>ithub@gmail.com</a>
-
             </div>
         </div>
     </footer>
+    <!-- footer end -->
+
 </body>
-  <script src="script.js"></script>
 </html>
